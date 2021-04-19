@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript Auto Text Effect</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@700;800;900&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="d-flex mt-4 justify-content-center">
+  <div class="container">
+    <h1 class="display-3 text-danger">Auto Text Effect</h1>    
+      <div class="row">
+        <div class="col-md-12 col-sm-12 my-4">          
+          <div class="text-center autoText">
+            www.thenagesh.com
+          </div>
+        </div>
+      </div>
+   </div>
+  </div>
+
+  <script>
+    var name = "www.thenagesh.com";
+    var index = 0;
+
+    function autoText(){      
+      document.querySelector(".autoText").innerHTML = name.slice(0, index);
+      index++;
+
+      if(index > name.length){
+        index = 0;
+      }
+    }
+
+    setInterval(autoText, 500);
+  </script>
+</body>
+</html>
